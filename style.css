@@ -44,10 +44,11 @@ h2{
     background: #034135;
 }
 .game{
-width: 440px;
-height: 440px;
+width: 430px;
+height: 430px;
 display: flex;
 flex-wrap: wrap;
+gap: 10px;
 transform-style: preserve-3d;
 perspective: 500px;
 }
@@ -64,21 +65,23 @@ perspective: 500px;
     transition: 0.25s;
 
 }
-
-.item::after{
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: black;
-    opacity: 0.85;
-    transition: 0.25s;
-    transform: rotateY(180deg);
-}
 .item.boxOpen{
     transform: rotateY(0deg);
 
 }
-.boxOpen::after{
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #055848;
+    /* opacity: 0.85; */
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.boxOpen::after,
+.boxMatch::after{
     transform: rotateY(180deg);
 
 
