@@ -39,6 +39,10 @@ h2{
     font-weight: 600;
 
 }
+.reset:hover{
+    background:#f3fffd ;
+   
+}
 .reset:focus{
     color: white;
     background: #034135;
